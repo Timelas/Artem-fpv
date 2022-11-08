@@ -1,0 +1,135 @@
+.form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form__block {
+  background: rgba(57, 55, 228, 0.15);
+  border: 3px solid #FFFFFF;
+  border-radius: 86px;
+  max-width: 890px;
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__title {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 30px;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
+  margin: 0 auto 45px;
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__two-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form__input {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 240px;
+  background-color: transparent;
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 15px;
+  align-items: center;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
+  margin-bottom: 30px;
+  padding-left: 10px;
+  min-width: 300px;
+  min-height: 45px;
+}
+
+.form__input_type_phone {
+  margin-right: 20px;
+}
+
+.form__input_type_description {
+  border-radius: 20px;
+}
+
+.form__btn {
+  background: #5256BE;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 24px;
+  border: 0;
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 24px;
+  align-items: center;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
+  width: 350px;
+  height: 50px;
+  cursor: pointer;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.form__contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form__line {
+  border: 0.5px solid #FFFFFF;
+  height: 0;
+  width: 270px;
+  align-self: center;
+}
+
+.form__or {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  align-items: center;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
+}
+
+.form__text {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  align-items: center;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
+}
+
+.form__link {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__icon {
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+}
