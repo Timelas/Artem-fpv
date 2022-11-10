@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 import videoDesctop from "../../images/video-desctop.mp4";
-import arrow from "../../images/arrow.svg";
+import videoMobile from "../../images/video-desctop.mp4";
 
 function Header() {
   return (

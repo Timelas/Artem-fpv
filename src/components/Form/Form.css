@@ -5,7 +5,7 @@
   max-width: 890px;
   display: flex;
   flex-direction: column;
-  padding: 70px;
+  /* padding: 70px; */
   align-items: center;
   justify-content: center;
 }

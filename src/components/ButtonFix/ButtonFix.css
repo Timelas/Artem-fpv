@@ -37,3 +37,13 @@
     top: 35px;
   }
 }
+
+@media screen and (max-width: 1439px) {
+  .button-fix {
+    right: 30px;
+    width: 200px;
+    height: 60px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
