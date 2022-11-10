@@ -3,6 +3,7 @@ import "./Portfolio.css";
 
 function Portfolio() {
   return (
+    <div className="rr">
     <section className="portfolio" id="portfolio">
       <h2 className="portfolio__title">ПРИМЕРЫ</h2>
       <div className="portfolio__work">
@@ -15,6 +16,7 @@ function Portfolio() {
       </div>
       <button className="portfolio__arrow">ЕЩЁ</button>
     </section>
+    </div>
   );
 }
 

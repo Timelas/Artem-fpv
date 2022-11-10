@@ -14,8 +14,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  min-width: 100%;
-  min-height: 100%;
   z-index: -1;
 }
 
@@ -87,4 +85,8 @@
   background-size: contain;
   cursor: pointer;
   margin: auto;
+}
+
+@media screen {
+
 }

@@ -4,8 +4,7 @@ import icon from "../../images/WA.png"
 
 function Form() {
   return (
-    <section className="form">
-      <div className="form__block">
+      <div className="form">
         <h3 className="form__title">Нужна съёмка?</h3>
         <form action="" className="form__inputs" method="get">
           <div className="form__two-inputs">
@@ -28,7 +27,6 @@ function Form() {
           <img className="form__icon" src={icon}></img>
         </div>
       </div>
-    </section>
   );
 }
 

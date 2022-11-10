@@ -20,9 +20,20 @@
   z-index: 3;
   letter-spacing: 0.15em;
   line-height: 32px;
+  opacity: 0;
 }
 
 .button-fix:hover {
   background-color: rgb(82, 86, 190, 0.6);
   transform: scale(110%);
+}
+
+.button-fix_visible {
+  opacity: 1;
+}
+
+@media screen and (min-width: 1441px) {
+  .button-fix {
+    top: 35px;
+  }
 }
