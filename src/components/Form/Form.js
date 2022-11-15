@@ -10,7 +10,7 @@ function Form(props) {
       <div className="form">
         <button className={`form__close form__close_${isButtonCloseVisible && 'visible'}`} onClick={closePopup}></button>
         <h3 className="form__title">Оставьте свои контакты и я свяжусь с вами в ближайшее время</h3>
-        <form action="" className="form__inputs" method="get" >
+        <form action="" className="form__inputs" method="get" noValidate>
           <div className="form__two-inputs">
           <input type="tel" htmlFor="phone" className="form__input form__input_type_phone" required name="phone" id="phone" placeholder="телефон" ></input>
           <span className="form__input-error phone-input-error"></span>

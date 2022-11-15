@@ -91,3 +91,10 @@
   .portfolio__arrow:hover {
     background-color: rgb(82, 86, 190, 0.6);
   }
+
+  @media screen and (max-width: 550px) {
+    .portfolio__video {
+      width: 30px;
+    }
+
+  }
