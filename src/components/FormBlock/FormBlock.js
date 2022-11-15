@@ -5,7 +5,7 @@ import Form from "../Form/Form";
 function FormBlock() {
   return (
     <section className="form-block">
-      <Form></Form>
+      <Form isButtonCloseVisible={false}></Form>
     </section>
   );
 }

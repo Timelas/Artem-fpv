@@ -2,10 +2,10 @@ import React from "react";
 import "./ButtonFix.css";
 
 function ButtonFix(props) {
-const {onOpenPopup, isVisible} = props;
+  const {onOpenPopup, isButtonVisible} = props;
 
   return (
-    <button className={`button-fix button-fix_${isVisible && 'visible'}`} onClick={onOpenPopup}>ЗАКАЗАТЬ СЪЁМКУ</button>
+    <button className={`button-fix button-fix_${isButtonVisible && 'visible'}`} onClick={onOpenPopup}>ЗАКАЗАТЬ СЪЁМКУ</button>
   );
 }
 

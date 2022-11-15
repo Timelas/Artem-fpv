@@ -9,26 +9,35 @@ import FormBlock from "../FormBlock/FormBlock";
 import Footer from "../Footer/Footer";
 
 function App() {
-  const [isFormPopup, setIsFormPopup] = React.useState(false);
-  const [isButtonVisible, setisButtonVisible] = React.useState(true);
+  const [isOpenPopup, setIsOpenPopup] = React.useState(false);
+  const [isButtonVisible, setIsButtonVisible] = React.useState(true);
+  const [isArrowVisible, setIsArrowVisible] = React.useState(true);
 
   function handleOpenPopup () {
-    setIsFormPopup(true);
-    setisButtonVisible(false);
-}
+    setIsOpenPopup(true);
+    setIsButtonVisible(false);
+    setIsArrowVisible(false);
+  }
+
+  function handleClosePopup () {
+    setIsOpenPopup(false);
+    setIsButtonVisible(true);
+    setIsArrowVisible(true);
+  }
 
   return (
     <div className="App">
-      <Header />
+      <Header isArrowVisible={isArrowVisible}/>
       <ButtonFix
-        isVisible={isButtonVisible}
-        onOpenPopup={handleOpenPopup}/>
+        isButtonVisible={isButtonVisible}
+        onOpenPopup={handleOpenPopup} />
       <Portfolio />
       <Information />
       <FormBlock />
       <Footer />
       <Popup
-        isOpen={isFormPopup}/>
+        isOpen={isOpenPopup}
+        onClosePopup={handleClosePopup} />
     </div>
   );
 }

@@ -1,13 +1,50 @@
 .form {
+  position: relative;
   background: #202153;
   border: 3px solid #FFFFFF;
   border-radius: 86px;
   max-width: 890px;
   display: flex;
   flex-direction: column;
-  /* padding: 70px; */
+  padding: 60px;
   align-items: center;
   justify-content: center;
+  max-width: 55%;
+}
+
+.form__input-error {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  right: -350px;
+  width: 50px;
+  height: 50px;
+}
+
+.form__close {
+  background-image: url(../../images/Close.svg);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.form__close_visible {
+  opacity: 1;
 }
 
 .form__title {
@@ -17,13 +54,16 @@
   font-size: 30px;
   color: #f1f1f1;
   letter-spacing: 0.15em;
-  line-height: 32px;
+  line-height: 42px;
   margin: 0 auto 45px;
+  text-align: center;
 }
 
 .form__inputs {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .form__two-inputs {
@@ -43,11 +83,13 @@
   align-items: center;
   color: #f1f1f1;
   letter-spacing: 0.15em;
-  line-height: 32px;
+  line-height: 20px;
   margin-bottom: 30px;
   padding-left: 10px;
-  min-width: 300px;
   min-height: 45px;
+  width: 100%;
+  box-sizing: border-box;
+
 }
 
 .form__input_type_phone {
@@ -56,6 +98,7 @@
 
 .form__input_type_description {
   border-radius: 20px;
+  resize: none;
 }
 
 .form__btn {
@@ -88,7 +131,8 @@
 .form__line {
   border: 0.5px solid #FFFFFF;
   height: 0;
-  width: 270px;
+  max-width: 350px;
+  width: 45%;
   align-self: center;
 }
 
@@ -101,6 +145,7 @@
   color: #f1f1f1;
   letter-spacing: 0.15em;
   line-height: 32px;
+  margin: 0 20px 0;
 }
 
 .form__text {
@@ -123,4 +168,149 @@
   width: 70px;
   height: 70px;
   margin-left: 20px;
+}
+
+@media screen and (min-width: 1441px) {
+  .form {
+    padding: 100px 100px 50px;
+  }
+
+  .form__close {
+    top: 40px;
+    right: 50px;
+  }
+
+  .form__title {
+    font-size: 25px;
+    line-height: 32px;
+    margin: 0 auto 35px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .form {
+    padding: 80px;
+  }
+
+  .form__title {
+    font-size: 25px;
+    line-height: 32px;
+    margin: 0 auto 35px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .form {
+    padding: 60px;
+    max-width: 70%;
+  }
+
+  .form__close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .form__title {
+    font-size: 20px;
+    margin: 0 auto 30px;
+  }
+
+  .form__input {
+    font-size: 15px;
+    min-height: 40px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .form {
+    border-radius: 60px;
+  }
+
+  .form__close {
+    top: 30px;
+    right: 30px;
+  }
+
+  .form__input {
+    font-size: 15px;
+    min-height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .form__btn {
+    font-size: 15px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .form__link {
+    align-items: center;
+  }
+
+  .form__contacts {
+    margin-bottom: 15px;
+  }
+
+  .form__or {
+    font-size: 15px;
+    margin: 0 10px 0;
+  }
+
+  .form__text {
+    font-size: 15px;
+  }
+
+  .form__icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .form {
+    padding: 35px;
+    border-radius: 40px;
+    max-width: 80%;
+  }
+
+  .form__close {
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__title {
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0 auto 25px;
+  }
+
+  .form__input {
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+  .form__two-inputs {
+    flex-direction: column;
+  }
+
+  .form__contacts {
+    margin-bottom: 10px;
+  }
+
+  .form__or {
+    font-size: 10px;
+    margin: 0 10px 0;
+  }
+
+  .form__text {
+    font-size: 10px;
+  }
+
+  .form__icon {
+    width: 30px;
+    height: 30px;
+  }
 }

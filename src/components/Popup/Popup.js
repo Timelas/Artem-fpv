@@ -3,11 +3,11 @@ import Form from "../Form/Form";
 import "./Popup.css";
 
 function Popup(props) {
-  const {isOpen} = props;
+  const {isOpen, onClosePopup} = props;
 
   return (
     <section className={`popup popup_${isOpen && 'open'}`}>
-      <Form></Form>
+      <Form closePopup={onClosePopup} isButtonCloseVisible={true}></Form>
     </section>
   );
 }
