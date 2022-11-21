@@ -1,25 +1,88 @@
 import React from "react";
+import { useForm } from 'react-hook-form';
+import { ErrorMessage } from "@hookform/error-message";
 import "./Form.css";
 import iconWA from "../../images/WA.png";
 import iconTelegram from "../../images/Telegram.png";
 
 function Form(props) {
   const {closePopup, isButtonCloseVisible} = props;
+  const { register, formState: { errors, isValid }, handleSubmit, clearErrors, reset } = useForm({
+    defaultValues: {
+      phone: '',
+      name: '',
+      text: ''
+    },
+    mode: "onBlur",
+    criteriaMode: 'all',
+  });
+
+  function onSubmit(data) {
+    console.log(data);
+  }
+
 
   return (
       <div className="form">
-        <button className={`form__close form__close_${isButtonCloseVisible && 'visible'}`} onClick={closePopup}></button>
+        <button className={`form__close form__close_${isButtonCloseVisible && 'visible'}`} onClick={() => {clearErrors(); closePopup(); reset()}}></button>
         <h3 className="form__title">Оставьте свои контакты и я свяжусь с вами в ближайшее время</h3>
-        <form action="" className="form__inputs" method="get" noValidate>
+        <form className="form__inputs" onSubmit={handleSubmit(onSubmit)}>
           <div className="form__two-inputs">
-          <input type="tel" htmlFor="phone" className="form__input form__input_type_phone" required name="phone" id="phone" placeholder="телефон" ></input>
-          <span className="form__input-error phone-input-error"></span>
-          <input type="text" htmlFor="name" className="form__input form__input_type_name" required name="name" id="name" placeholder="имя"></input>
-          <span className="form__input-error name-input-error"></span>
+            <div className="form__block-input">
+              <label htmlFor="phone"></label>
+              <input
+                type="tel"
+                {...register('phone', {
+                  required: "Это поле обязательно, введите номер телефона",
+                  type: {
+                    value: Number,
+                    message: "В это поле можно вводить только цифры",
+                  },
+                  pattern: {
+                    value: /^[0-9+-]+$/,
+                    message: "В это поле можно вводить только цифры",
+                  },
+                  minLength: {
+                    value: 10,
+                    message: "Недостаточная длина введенного номера"
+                  },
+                  maxLength: {
+                    value: 12,
+                    message: "Вы ввели слишком много цифр"
+                  }
+                }
+                )}
+                className="form__input form__input_type_phone"
+                name="phone"
+                placeholder="телефон"></input>
+            <ErrorMessage
+              errors={errors}
+              name="phone"
+              render={({ message }) => <p className="form__input-error">{message}</p>}
+            />
+            </div>
+            <div className="form__block-input">
+              <label htmlFor="name"></label>
+              <input
+                type="text"
+                {...register('name', {
+                  minLength: 2,
+                  maxLength: 14,
+                })}
+                className="form__input form__input_type_name"
+                name="name"
+                placeholder="имя"></input>
+                {errors.name && <p className="form__input-error"></p>}
+            </div>
           </div>
-          <textarea type="text" className="form__input form__input_type_description"  name="description" id="description"  placeholder="описание съёмки"></textarea>
-          <span className="form__input-error description-input-error"></span>
-          <button className="form__btn" type="submit">Отправить</button>
+          <label htmlFor="description"></label>
+          <textarea
+            type="text"
+            {...register('description')}
+            className="form__input form__input_type_description"
+            name="description"
+            placeholder="что нужно снять?"></textarea>
+          <button className="form__btn" type="submit" disabled={!isValid}>Отправить</button>
       </form>
         <div className="form__contacts">
             <div className="form__line"></div>

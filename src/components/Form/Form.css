@@ -12,19 +12,27 @@
   max-width: 55%;
 }
 
+.form__block-input {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  color: #f1f1f1;
+  padding-left: 10px;
+  min-height: 45px;
+  width: 100%;
+  margin: 0;
+}
+
 .form__input-error {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
-  color: #FF0000;
-  position: absolute;
-  left: 0;
-  top: 30px;
-  right: -350px;
-  width: 50px;
-  height: 50px;
+  font-weight: 200;
+  font-size: 15px;
+  align-items: center;
+  letter-spacing: 0.15em;
+  line-height: 20px;
+  color: #cc0202;
+  margin: 10px 0 0 10px;
 }
 
 .form__close {
@@ -55,7 +63,7 @@
   color: #f1f1f1;
   letter-spacing: 0.15em;
   line-height: 42px;
-  margin: 0 auto 45px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -84,12 +92,11 @@
   color: #f1f1f1;
   letter-spacing: 0.15em;
   line-height: 20px;
-  margin-bottom: 30px;
+  margin-top: 30px;
   padding-left: 10px;
   min-height: 45px;
   width: 100%;
   box-sizing: border-box;
-
 }
 
 .form__input_type_phone {
@@ -99,6 +106,8 @@
 .form__input_type_description {
   border-radius: 20px;
   resize: none;
+  height: 70px;
+  line-height: 30px;
 }
 
 .form__btn {
@@ -117,7 +126,16 @@
   height: 50px;
   cursor: pointer;
   align-self: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
+}
+
+.form__btn:disabled {
+  background: #8f8f8f;
+  opacity: .5;
+}
+
+.form__btn:active {
+  background: #4a4fce;
 }
 
 .form__contacts {
@@ -183,7 +201,6 @@
   .form__title {
     font-size: 25px;
     line-height: 32px;
-    margin: 0 auto 35px;
   }
 }
 
@@ -195,7 +212,6 @@
   .form__title {
     font-size: 25px;
     line-height: 32px;
-    margin: 0 auto 35px;
   }
 }
 
@@ -212,7 +228,6 @@
 
   .form__title {
     font-size: 20px;
-    margin: 0 auto 30px;
   }
 
   .form__input {
