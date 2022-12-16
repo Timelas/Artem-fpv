@@ -1,10 +1,12 @@
 .portfolio {
   display: flex;
   flex-direction: column;
-  /* min-width: 1200px; */
   align-items: center;
   position: relative;
-  height: 100vh;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .portfolio__title {
@@ -14,11 +16,21 @@
   font-size: 40px;
   align-items: center;
   color: #f1f1f1;
-  margin: 40px 0 30px 50px;
+  margin: 50px 0 0;
+  padding-right: 40px;
+  box-sizing: border-box;
   display: inline-block;
   align-self: flex-start;
   letter-spacing: 0.15em;
   line-height: 32px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #4845e899;
+  border-radius: 60px;
+  height: 100px;
+  width: 500px;
+  position: absolute;
+  left: -200px;
 }
 
 .portfolio__work {
@@ -27,15 +39,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 16px;
-  margin-bottom: 30px;
+  margin: 200px 0 30px;
 }
 
 .portfolio__video {
-  background-image: url(../../images/fon.png);
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 100%;
   min-height: 250px;
+  min-width: 350px;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.5s;
@@ -43,17 +53,23 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  font-family: "Manrope", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.4);
-  letter-spacing: 0.15em;
-  line-height: 32px;
+  border: none;
+  padding: 0 15px;
 }
 
 .portfolio__video:hover {
   transform: scale(110%);
+}
+
+.portfolio-video__title {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
 }
 
 /* .portfolio__arrow {
@@ -92,9 +108,116 @@
     background-color: rgb(82, 86, 190, 0.6);
   }
 
-  @media screen and (max-width: 550px) {
-    .portfolio__video {
-      width: 30px;
+
+  @media screen and (min-width: 1700px) {
+    .portfolio {
+      padding: 0 50px 50px;
     }
 
+    .portfolio__title {
+      width: 600px;
+      height: 150px;
+      font-size: 45px;
+      margin: 100px 0;
+    }
+
+    .portfolio__work {
+      width: 100%;
+      max-width: 2200px;
+      gap: 30px;
+      margin: 350px 0 30px;
+    }
+
+    .portfolio__video {
+      width: 100%;
+      min-height: 400px;
+      min-width: 500px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.5s;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: none;
+      padding: 0 15px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .portfolio__video {
+      min-height: 200px;
+      min-width: 300px;
+    }
+  }
+
+  @media screen and (max-width: 1025px) {
+    .portfolio__title {
+      width: 450px;
+      height: 70px;
+      font-size: 20px;
+      margin: 30px 0;
+    }
+
+    .portfolio__work {
+      margin: 130px 0 30px;
+    }
+
+    .portfolio {
+      height: fit-content;
+    }
+
+    .portfolio-video__title {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    .portfolio__work {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .portfolio__video {
+      min-height: 150px;
+      min-width: 200px;
+    }
+  }
+
+  @media screen and (max-width: 470px) {
+    .portfolio {
+      padding: 0 20px;
+    }
+
+    .portfolio__work {
+      margin: 90px 0 30px;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+
+    .portfolio__title {
+      width: 380px;
+      height: 50px;
+      font-size: 15px;
+      margin: 20px 0;
+    }
+
+    .portfolio-video__title {
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+
+  @media screen and (max-width: 325px) {
+    .portfolio {
+      padding: 0 10px;
+    }
+
+    .portfolio__video {
+      min-height: 100px;
+      min-width: 150px;
+    }
   }

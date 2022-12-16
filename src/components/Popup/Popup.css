@@ -11,9 +11,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .popup_open {
   visibility: visible;
   opacity: 1;
+}
+
+.popup__form {
+  cursor: auto;
 }

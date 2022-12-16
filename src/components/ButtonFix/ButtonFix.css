@@ -3,11 +3,11 @@
   position: fixed;
   top: 20px;
   right: 40px;
-  border: 3px solid #4543E8;
+  border: 3px solid #4845e8;
   border-radius: 79px;
   width: 250px;
   height: 80px;
-  background-color: inherit;
+  background-color: #4845e899;
   color: #FFFFFF;
   font-style: normal;
   font-weight: 200;

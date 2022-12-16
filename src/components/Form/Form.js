@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { ErrorMessage } from "@hookform/error-message";
 import "./Form.css";
 import iconWA from "../../images/WA.png";
-import iconTelegram from "../../images/Telegram.png";
+import iconTg from "../../images/Telegram.png";
 
 function Form(props) {
   const {closePopup, isButtonCloseVisible} = props;
@@ -25,7 +25,7 @@ function Form(props) {
   return (
       <div className="form">
         <button className={`form__close form__close_${isButtonCloseVisible && 'visible'}`} onClick={() => {clearErrors(); closePopup(); reset()}}></button>
-        <h3 className="form__title">Оставьте свои контакты и я свяжусь с вами в ближайшее время</h3>
+        <h3 className="form__title">Оставьте свой номер и я свяжусь с вами в ближайшее время</h3>
         <form className="form__inputs" onSubmit={handleSubmit(onSubmit)}>
           <div className="form__two-inputs">
             <div className="form__block-input">
@@ -34,22 +34,22 @@ function Form(props) {
                 type="tel"
                 {...register('phone', {
                   required: "Это поле обязательно, введите номер телефона",
-                  type: {
-                    value: Number,
-                    message: "В это поле можно вводить только цифры",
-                  },
+                  // type: {
+                  //   value: Number,
+                  //   message: "В это поле можно вводить только цифры",
+                  // },
                   pattern: {
                     value: /^[0-9+-]+$/,
                     message: "В это поле можно вводить только цифры",
                   },
-                  minLength: {
-                    value: 10,
-                    message: "Недостаточная длина введенного номера"
-                  },
-                  maxLength: {
-                    value: 12,
-                    message: "Вы ввели слишком много цифр"
-                  }
+                  // minLength: {
+                  //   value: 10,
+                  //   message: "Недостаточная длина введенного номера"
+                  // },
+                  // maxLength: {
+                  //   value: 12,
+                  //   message: "Вы ввели слишком много цифр"
+                  // }
                 }
                 )}
                 className="form__input form__input_type_phone"
@@ -91,8 +91,8 @@ function Form(props) {
         </div>
         <div className="form__link">
           <p className="form__text">Напишите мне в:</p>
-          <img className="form__icon" src={iconWA}></img>
-          <img className="form__icon" src={iconTelegram}></img>
+          <a className="form__icon" href="http://t.me/abaksha" target="_blank" rel="noreferrer"><img className="form__icon" src={iconWA} alt="иконка WhatsApp"></img></a>
+          <a className="form__icon" href="https://wa.me/79215883019" target="_blank" rel="noreferrer"><img className="form__icon" src={iconTg} alt="иконка Telegram"></img></a>
         </div>
       </div>
   );

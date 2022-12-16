@@ -1,0 +1,80 @@
+.popup-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.popup-video_open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.video-one {
+  border-radius: 40px;
+  width: 1000px;
+  height: 562.5px;
+  cursor: auto;
+}
+
+.popup-video__close {
+  background-image: url(../../images/Close.svg);
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .video-one {
+    width: 900px;
+    height: 504.5px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .video-one {
+    width: 700px;
+    height: 396.5px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .video-one {
+    width: 500px;
+    height: 282.5px;
+  }
+
+  .popup-video__close {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .video-one {
+    width: 300px;
+    height: 168.5px;
+  }
+
+  .popup-video__close {
+    width: 20px;
+    height: 20px;
+  }
+}
