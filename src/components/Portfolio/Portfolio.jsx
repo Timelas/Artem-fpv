@@ -7,7 +7,7 @@ function Portfolio(props) {
 
   return (
     <section className="portfolio" id="portfolio">
-      <h2 className="portfolio__title">Работы</h2>
+      <h2 className="portfolio__title">Примеры</h2>
       <div className="portfolio__work">
         {initialCards.map(card => (
           <button className="portfolio__video"
@@ -15,7 +15,7 @@ function Portfolio(props) {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat"}}
-          onClick={event => onOpenVideo(card)}
+          onClick={() => onOpenVideo(card)}
           key={card.id}>
             <p className="portfolio-video__title">{card.text}</p>
           </button>

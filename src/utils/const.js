@@ -16,7 +16,7 @@ export const initialCards = [
 
     {
         title: 'Автомобиль в поле',
-        text: 'Съёмка автомобиля',
+        text: 'Автомобиль',
         src: 'https://www.youtube.com/embed/ajDRVWIsNDg?modestbranding=1&color=white&iv_load_policy=3',
         place: Car,
         id: 2
@@ -32,7 +32,7 @@ export const initialCards = [
 
     {
         title: 'Стая птиц',
-        text: 'Перелет птиц',
+        text: 'Птицы',
         src: 'https://www.youtube.com/embed/3qnzT61j9uc?modestbranding=1&color=white&iv_load_policy=3',
         place: Birds,
         id: 4
@@ -48,7 +48,7 @@ export const initialCards = [
 
     {
         title: 'Аэролодка',
-        text: 'Съёмка на льду',
+        text: 'Аэролодка',
         src: 'https://www.youtube.com/embed/gbobUubVXBs?modestbranding=1&color=white&iv_load_policy=3',
         place: Boat,
         id: 6

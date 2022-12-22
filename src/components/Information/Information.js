@@ -2,7 +2,7 @@ import React from "react";
 import "./Information.css";
 import tyema from "../../images/tyema.jpg";
 import cinewhoop from "../../images/cinewhoop.jpg";
-import freestyle from "../../images/dron2-1.jpg";
+import freestyle from "../../images/freestyle.jpg";
 import forPrice from "../../images/forPrice.jpg";
 
 function Information() {
@@ -20,20 +20,20 @@ function Information() {
             </div>
           </div>
         </div>
+        <div className="information__area information__area_topic_freestyle">
+          <img className="information__image" alt="фотография коптера freestyle" src={freestyle}></img>
+          <div className="information__container">
+            <div className="information__overlay">
+              <p className="information__text">Также в моем арсенале FPV freestyle 5 - “классический” коптер для съемок. Быстрый и маневренный. Используется для съемок на улице.</p>
+            </div>
+          </div>
+        </div>
         <div className="information__area information__area_topic_cinewhoop">
           <img className="information__image" alt="фотография коптера Cinewhoop" src={cinewhoop}></img>
           <div className="information__container">
             <div className="information__overlay">
               <p className="information__text">Я снимаю на Cinewhoop - коптер с защищенными пропеллерами, что позволяет летать близко к людям,
               а также внутри помещений. Создает более плавные и кинематографичные кадры.</p>
-            </div>
-          </div>
-        </div>
-        <div className="information__area information__area_topic_freestyle">
-          <img className="information__image" alt="фотография коптера freestyle" src={freestyle}></img>
-          <div className="information__container">
-            <div className="information__overlay">
-              <p className="information__text">Также в моем арсенале FPV freestyle 5 - “классический” коптер для съемок. Быстрый и маневренный. Используется для съемок на улице.</p>
             </div>
           </div>
         </div>

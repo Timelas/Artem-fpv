@@ -28,7 +28,7 @@
   background-color: #4845e899;
   border-radius: 60px;
   height: 100px;
-  width: 500px;
+  width: 600px;
   position: absolute;
   left: -200px;
 }
@@ -63,6 +63,7 @@
 }
 
 .portfolio-video__title {
+  /* margin-top: 100px; */
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 200;

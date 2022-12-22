@@ -91,8 +91,8 @@ function Form(props) {
         </div>
         <div className="form__link">
           <p className="form__text">Напишите мне в:</p>
-          <a className="form__icon" href="http://t.me/abaksha" target="_blank" rel="noreferrer"><img className="form__icon" src={iconWA} alt="иконка WhatsApp"></img></a>
-          <a className="form__icon" href="https://wa.me/79215883019" target="_blank" rel="noreferrer"><img className="form__icon" src={iconTg} alt="иконка Telegram"></img></a>
+          <a className="form__icon" href="https://wa.me/79215883019" target="_blank" rel="noreferrer"><img className="form__icon" src={iconWA} alt="иконка WhatsApp"></img></a>
+          <a className="form__icon" href="http://t.me/abaksha" target="_blank" rel="noreferrer"><img className="form__icon" src={iconTg} alt="иконка Telegram"></img></a>
         </div>
       </div>
   );
