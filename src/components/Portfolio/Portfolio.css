@@ -202,12 +202,12 @@
     .portfolio__title {
       width: 380px;
       height: 50px;
-      font-size: 15px;
+      font-size: 17px;
       margin: 20px 0;
     }
 
     .portfolio-video__title {
-      font-size: 10px;
+      font-size: 13px;
       line-height: 15px;
     }
   }

@@ -69,6 +69,30 @@
 
 @media screen and (max-width: 550px) {
   .video-one {
+    width: 400px;
+    height: 225px;
+  }
+
+  .popup-video__close {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .video-one {
+    width: 350px;
+    height: 197px;
+  }
+
+  .popup-video__close {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .video-one {
     width: 300px;
     height: 168.5px;
   }

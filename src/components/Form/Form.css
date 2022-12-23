@@ -309,7 +309,7 @@
   }
 
   .form__title {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 25px;
     margin: 0 auto 25px;
   }
@@ -345,5 +345,17 @@
 
   .form__btn {
     margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .form {
+    padding: 20px;
+    box-sizing: content-box;
+  }
+
+  .form__title {
+    font-size: 13px;
+    line-height: 22px;
   }
 }
