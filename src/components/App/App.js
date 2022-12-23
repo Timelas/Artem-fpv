@@ -13,6 +13,8 @@ function App() {
   const [isOpenPopup, setIsOpenPopup] = React.useState(false);
   const [isOpenVideo, setIsOpenVideo] = React.useState(false);
   const [isButtonVisible, setIsButtonVisible] = React.useState(true);
+  const [isformAnswer, setIsformAnswer] = React.useState(false);
+  const [isformVisible, setIsformVisible] = React.useState(true);
   const [isArrowVisible, setIsArrowVisible] = React.useState(true);
   const [isCard, setIsCard] = React.useState([]);
 
@@ -42,6 +44,11 @@ function App() {
     setIsCard([]);
   }
 
+  function visibleAnswerForm () {
+    setIsformAnswer(true);
+    setIsformVisible(false);
+  }
+
   return (
     <div className="App">
       <Header isArrowVisible={isArrowVisible}/>
@@ -49,13 +56,18 @@ function App() {
         isButtonVisible={isButtonVisible}
         onOpenPopup={handleOpenPopup} />
       <Portfolio
-        onOpenVideo={handleOpenVideo}/>
+        onOpenVideo={handleOpenVideo} />
       <Information />
-      <FormBlock />
+      <FormBlock
+        visibleAnswerForm={visibleAnswerForm}
+        visibleForm={isformVisible}
+        onSendForm={isformAnswer} />
       <Footer />
       <Popup
         isOpen={isOpenPopup}
-        onClosePopup={handleClosePopup} />
+        visibleAnswerForm={visibleAnswerForm}
+        onClosePopup={handleClosePopup}
+        onSendForm={isformAnswer} />
       <PopupVideo
         isOpen={isOpenVideo}
         card={isCard}

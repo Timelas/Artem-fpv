@@ -192,6 +192,34 @@
   margin-left: 20px;
 }
 
+.form__container {
+  display: none;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.form__container_visible {
+  display: flex;
+}
+
+.form__answer-good {
+  font-family: "Manrope", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  align-items: center;
+  color: #f1f1f1;
+  letter-spacing: 0.15em;
+  line-height: 32px;
+  display: none;
+  text-align: center;
+}
+
+.form__answer-good_visible {
+  display: block;
+}
+
 @media screen and (min-width: 1441px) {
   .form {
     padding: 50px 100px 50px;
@@ -345,6 +373,10 @@
 
   .form__btn {
     margin: 10px 0;
+  }
+
+  .form__answer-good {
+    font-size: 15px;
   }
 }
 
