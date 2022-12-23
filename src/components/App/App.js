@@ -22,6 +22,7 @@ function App() {
     setIsOpenPopup(true);
     setIsButtonVisible(false);
     setIsArrowVisible(false);
+    setIsformVisible(true);
   }
 
   function handleOpenVideo (card) {
@@ -67,6 +68,7 @@ function App() {
         isOpen={isOpenPopup}
         visibleAnswerForm={visibleAnswerForm}
         onClosePopup={handleClosePopup}
+        visibleForm={isformVisible}
         onSendForm={isformAnswer} />
       <PopupVideo
         isOpen={isOpenVideo}

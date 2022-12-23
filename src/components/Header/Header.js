@@ -1,8 +1,8 @@
 import React from "react";
 import { useMediaQuery } from 'usehooks-ts';
 import "./Header.css";
-import videoDesctop from "../../images/video-desctop.mp4";
-import videoMobile from "../../images/video-mobile.mp4";
+import videoDesctop from "../../images/desctop.mp4";
+import videoMobile from "../../images/mobile.mp4";
 import posterDesctop from "../../images/start-desctop.jpg";
 import posterMobile from "../../images/start-mobile.jpg";
 
