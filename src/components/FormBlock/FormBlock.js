@@ -9,6 +9,7 @@ function FormBlock() {
       <div className="form-block__container">
         <Form isButtonCloseVisible={false}></Form>
       </div>
+      {/* <div className="form-block__image"></div> */}
     </section>
   );
 }

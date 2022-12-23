@@ -106,10 +106,10 @@
   font-family: "Manrope", "Arial", sans-serif;
   font-style: normal;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 16px;
   color: #c4c4c4;
   letter-spacing: 0.15em;
-  line-height: 20px;
+  line-height: 25px;
   text-align: center;
   width: 90%;
   margin: 0;
@@ -136,8 +136,15 @@
 
     .information__text {
       font-size: 17px;
-      line-height: 26px;
+      line-height: 30px;
       width: 95%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .information__text {
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 
@@ -159,23 +166,39 @@
   }
 
   .information__text {
-    font-size: 10px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
 @media screen and (max-width: 770px) {
   .information__container {
-    height: 100px;
+    height: 120px;
+    width: 90%;
+  }
+
+  .information__overlay {
+    border-radius: 25px;
+  }
+
+  .information {
+    padding: 20px 20px 50px;
   }
 
   .information__text {
-    font-size: 8px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .information__text {
+    font-size: 10.5px;
     line-height: 15px;
   }
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 550px) {
   .information {
     padding: 10px 10px 50px;
   }
@@ -204,20 +227,14 @@
     border-radius: 20px;
   }
 
-  .information__container {
-    height: 120px;
-    width: 90%;
-  }
-
   .information__overlay {
-    border-radius: 25px;
     top: -25px;
-    padding: 20px 0 0;
+    padding: 22px 0 0;
   }
 
   .information__text {
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 14px;
+    line-height: 18px;
     width: 95%;
   }
 }
@@ -228,8 +245,7 @@
   }
 
   .information__text {
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 13px;
   }
 }
 
@@ -239,6 +255,7 @@
   }
 
   .information__text {
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }

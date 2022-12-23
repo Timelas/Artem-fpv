@@ -10,7 +10,6 @@ function Footer() {
         <a className="footer__link" href="https://www.youtube.com/@abaksha">YouTube</a>
         <a className="footer__link" href="https://vk.com/abakshaa">VK</a>
       </div>
-
     </footer>
   );
 }

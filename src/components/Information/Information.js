@@ -14,8 +14,7 @@ function Information() {
           <img className="information__image" alt="фотография Артёма" src={tyema}></img>
           <div className="information__container">
             <div className="information__overlay">
-              <p className="information__text">Меня зовут Артём. 3 года назад я увлекся FPV, год назад занялся коммерческими съёмками.
-                Для меня это не основной источник дохода, поэтому приоритетом в работе является креатив, создание такого материала,
+              <p className="information__text">Меня зовут Артём. Съёмка на FPV для меня - не основной источник дохода, поэтому приоритетом в работе является креатив, создание такого материала,
                 которым все останутся довольны.</p>
             </div>
           </div>
@@ -24,7 +23,7 @@ function Information() {
           <img className="information__image" alt="фотография коптера freestyle" src={freestyle}></img>
           <div className="information__container">
             <div className="information__overlay">
-              <p className="information__text">Также в моем арсенале FPV freestyle 5 - “классический” коптер для съемок. Быстрый и маневренный. Используется для съемок на улице.</p>
+              <p className="information__text">FPV freestyle 5 - “классический” коптер для съемок. Быстрый и маневренный. Используется для съёмок на улице.</p>
             </div>
           </div>
         </div>
@@ -32,7 +31,7 @@ function Information() {
           <img className="information__image" alt="фотография коптера Cinewhoop" src={cinewhoop}></img>
           <div className="information__container">
             <div className="information__overlay">
-              <p className="information__text">Я снимаю на Cinewhoop - коптер с защищенными пропеллерами, что позволяет летать близко к людям,
+              <p className="information__text">Cinewhoop - коптер с защищенными пропеллерами, что позволяет летать близко к людям,
               а также внутри помещений. Создает более плавные и кинематографичные кадры.</p>
             </div>
           </div>
@@ -41,7 +40,7 @@ function Information() {
           <img className="information__image" alt="фотография техники" src={forPrice}></img>
           <div className="information__container">
             <div className="information__overlay">
-              <p className="information__text">Стоимость услуг составляет 3000 рублей в час. Выезд в пределах КАД - бесплатно. Возможно увеличение стоимости в случае наличия дополнительных рисков, таких как полеты над водой и т.п.</p>
+              <p className="information__text">Стоимость услуг составляет 5000 рублей в час. Выезд в пределах КАД - бесплатно.</p>
             </div>
           </div>
         </div>

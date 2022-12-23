@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from "@hookform/error-message";
 import "./Form.css";
@@ -11,16 +12,18 @@ function Form(props) {
     defaultValues: {
       phone: '',
       name: '',
-      text: ''
+      description: ''
     },
     mode: "onBlur",
     criteriaMode: 'all',
   });
 
   function onSubmit(data) {
-    console.log(data);
+    axios.post('https://sheet.best/api/sheets/2a3d941b-6152-41ae-997c-ec67d31a9e8d', data)
+    .then(response => {
+      console.log(response);
+    })
   }
-
 
   return (
       <div className="form">
