@@ -190,7 +190,7 @@
 
   @media screen and (max-width: 470px) {
     .portfolio {
-      padding: 0 20px;
+      padding: 0 10px;
     }
 
     .portfolio__work {
@@ -213,10 +213,6 @@
   }
 
   @media screen and (max-width: 325px) {
-    .portfolio {
-      padding: 0 10px;
-    }
-
     .portfolio__video {
       min-height: 100px;
       min-width: 150px;

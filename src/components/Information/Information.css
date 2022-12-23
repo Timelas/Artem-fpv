@@ -194,8 +194,8 @@
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
     "tyema"
-    "cinewhoop"
     "freestyle"
+    "cinewhoop"
     "price ";
   }
 
@@ -205,18 +205,18 @@
   }
 
   .information__container {
-    height: 100px;
+    height: 120px;
     width: 90%;
   }
 
   .information__overlay {
     border-radius: 25px;
     top: -25px;
-    padding: 25px 0 0;
+    padding: 20px 0 0;
   }
 
   .information__text {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 17px;
     width: 95%;
   }
@@ -228,7 +228,7 @@
   }
 
   .information__text {
-    font-size: 9px;
+    font-size: 11px;
     line-height: 15px;
   }
 }
@@ -239,6 +239,6 @@
   }
 
   .information__text {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
