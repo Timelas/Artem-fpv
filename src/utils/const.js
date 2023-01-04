@@ -1,8 +1,8 @@
-import Bridge from "../images/most.png";
-import Girl from "../images/Girl.png";
-import Plane from "../images/Plane.png";
-import Birds from "../images/Birds.png";
-import Car from "../images/Car.png";
+import Bridge from "../images/most.webp";
+import Girl from "../images/Girl.webp";
+import Plane from "../images/Plane.webp";
+import Birds from "../images/Birds.webp";
+import Car from "../images/Car.webp";
 import Boat from "../images/Boat.jpg";
 
 export const initialCards = [

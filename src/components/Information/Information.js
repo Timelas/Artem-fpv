@@ -1,9 +1,9 @@
 import React from "react";
 import "./Information.css";
 import tyema from "../../images/tyema.jpg";
-import cinewhoop from "../../images/cinewhoop.jpg";
-import freestyle from "../../images/freestyle.jpg";
-import forPrice from "../../images/forPrice.jpg";
+import cinewhoop from "../../images/cinewhoop1.webp";
+import freestyle from "../../images/freestyle.webp";
+import forPrice from "../../images/forPrice.webp";
 
 function Information() {
   return (

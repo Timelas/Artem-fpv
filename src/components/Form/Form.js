@@ -1,12 +1,15 @@
-import React from "react";
+import React, {Suspense} from "react";
 import axios from "axios";
 import { useForm } from 'react-hook-form';
 import { ErrorMessage } from "@hookform/error-message";
 import "./Form.css";
+import Preloader from '../Preloader/Preloader';
 import iconWA from "../../images/WA.png";
 import iconTg from "../../images/Telegram.png";
 
 function Form(props) {
+  // const form = document.forms.form;
+  // const tel = form.elements.phone;
   const {closePopup, isButtonCloseVisible, onSendForm, visibleAnswerForm, visibleForm} = props;
   const { register, formState: { errors, isValid }, handleSubmit, clearErrors, reset } = useForm({
     defaultValues: {
@@ -27,41 +30,38 @@ function Form(props) {
     })
   }
 
+  // function add () {
+  //   return tel.value="+7";
+  // }
+
+
   return (
+    <Suspense fallback={<Preloader/>}>
       <div className="form">
         <p className={`form__answer-good form__answer-good_${onSendForm && 'visible'}`}>Ваша заявка отправлена, я свяжусть с вами в ближайшее время!</p>
         <button className={`form__close form__close_${isButtonCloseVisible && 'visible'}`} onClick={() => {clearErrors(); closePopup(); reset()}}></button>
         <div className={`form__container form__container_${visibleForm && 'visible'}`}>
           <h3 className="form__title">Оставьте свой номер и я свяжусь с вами в ближайшее время</h3>
-          <form className="form__inputs" onSubmit={handleSubmit(onSubmit)}>
+          <form className="form__inputs" onSubmit={handleSubmit(onSubmit)} action="mailto:alexandra.lomakova@yandex.ru" encType="text/plain" name="form">
             <div className="form__two-inputs">
               <div className="form__block-input">
                 <label htmlFor="phone"></label>
                 <input
                   type="tel"
+                  // onClick={add}
                   {...register('phone', {
                     required: "Это поле обязательно, введите номер телефона",
-                    // type: {
-                    //   value: Number,
-                    //   message: "В это поле можно вводить только цифры",
-                    // },
                     pattern: {
                       value: /^[0-9+-]+$/,
                       message: "В это поле можно вводить только цифры",
                     },
-                    // minLength: {
-                    //   value: 10,
-                    //   message: "Недостаточная длина введенного номера"
-                    // },
-                    // maxLength: {
-                    //   value: 12,
-                    //   message: "Вы ввели слишком много цифр"
-                    // }
                   }
                   )}
                   className="form__input form__input_type_phone"
                   name="phone"
-                  placeholder="телефон"></input>
+                  placeholder="телефон"
+                  id="tel"
+                  ></input>
               <ErrorMessage
                 errors={errors}
                 name="phone"
@@ -103,6 +103,7 @@ function Form(props) {
           </div>
         </div>
       </div>
+    </Suspense>
   );
 }
 

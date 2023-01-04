@@ -3,8 +3,8 @@ import { useMediaQuery } from 'usehooks-ts';
 import "./Header.css";
 import videoDesctop from "../../images/desctop.mp4";
 import videoMobile from "../../images/mobile.mp4";
-import posterDesctop from "../../images/start-desctop.jpg";
-import posterMobile from "../../images/start-mobile.jpg";
+import posterDesctop from "../../images/start-desctop.webp";
+import posterMobile from "../../images/start-mobile.webp";
 
 function Header(props) {
   const resize = useMediaQuery('(min-width: 500px)');

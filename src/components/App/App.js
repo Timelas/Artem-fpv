@@ -23,6 +23,7 @@ function App() {
     setIsButtonVisible(false);
     setIsArrowVisible(false);
     setIsformVisible(true);
+    setIsformAnswer(false);
   }
 
   function handleOpenVideo (card) {

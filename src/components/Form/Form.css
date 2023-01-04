@@ -32,7 +32,7 @@
   letter-spacing: 0.15em;
   line-height: 20px;
   color: #cc0202;
-  margin: 10px 0 0 10px;
+  margin: 0 0 0 10px;
 }
 
 .form__close {
@@ -104,6 +104,10 @@
 
 .form__input_type_phone {
   margin-right: 20px;
+}
+
+.form__input_type_phone::after:focus-within {
+  initial-value: "+7";
 }
 
 
