@@ -89,7 +89,7 @@ function Form(props) {
               className="form__input form__input_type_description"
               name="description"
               placeholder="что нужно снять?"></textarea>
-            <button className="form__btn" type="submit" disabled={!isValid}>Отправить</button>
+            <button className="form__btn" type="submit" disabled={!isValid} onClick="ym(91663099,'reachGoal','button_otpravit')">Отправить</button>
         </form>
           <div className="form__contacts">
               <div className="form__line"></div>
