@@ -21,7 +21,7 @@ function Header(props) {
         )
       }
       <div className="header__content">
-        <h1 className="header__title">FPV аэросъёмка</h1>
+        <h1 className="header__title">Аэросъемка на fpv дрон</h1>
         <p className="header__text">Живые и динамичные кадры, Вам точно понравится</p>
       </div>
       <a href="#portfolio"><div className={`arrow arrow_${isArrowVisible && 'visible'}`}></div></a>
