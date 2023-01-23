@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { Routes } from 'react-router-dom';
+import { Route, Routes, Redirect } from 'react-router-dom';
 import Header from "../Header/Header";
 import Popup from "../Popup/Popup";
 import PopupVideo from "../PopupVideo/PopupVideo";
@@ -9,6 +9,7 @@ import Portfolio from "../Portfolio/Portfolio";
 import Information from "../Information/Information";
 import FormBlock from "../FormBlock/FormBlock";
 import Footer from "../Footer/Footer";
+import Sitemap from "../Sitemap/Sitemap";
 
 function App() {
   const [isOpenPopup, setIsOpenPopup] = React.useState(false);
@@ -54,28 +55,35 @@ function App() {
 
   return (
     <div className="App">
-      <Header isArrowVisible={isArrowVisible}/>
-      <ButtonFix
-        isButtonVisible={isButtonVisible}
-        onOpenPopup={handleOpenPopup} />
-      <Portfolio
-        onOpenVideo={handleOpenVideo} />
-      <Information />
-      <FormBlock
-        visibleAnswerForm={visibleAnswerForm}
-        visibleForm={isformVisible}
-        onSendForm={isformAnswer} />
-      <Footer />
-      <Popup
-        isOpen={isOpenPopup}
-        visibleAnswerForm={visibleAnswerForm}
-        onClosePopup={handleClosePopup}
-        visibleForm={isformVisible}
-        onSendForm={isformAnswer} />
-      <PopupVideo
-        isOpen={isOpenVideo}
-        card={isCard}
-        onCloseVideo={handleCloseVideo} />
+      <Routes>
+        <Route path="/" exact>
+          <Header isArrowVisible={isArrowVisible}/>
+          <ButtonFix
+            isButtonVisible={isButtonVisible}
+            onOpenPopup={handleOpenPopup} />
+          <Portfolio
+            onOpenVideo={handleOpenVideo} />
+          <Information />
+          <FormBlock
+            visibleAnswerForm={visibleAnswerForm}
+            visibleForm={isformVisible}
+            onSendForm={isformAnswer} />
+          <Footer />
+          <Popup
+            isOpen={isOpenPopup}
+            visibleAnswerForm={visibleAnswerForm}
+            onClosePopup={handleClosePopup}
+            visibleForm={isformVisible}
+            onSendForm={isformAnswer} />
+          <PopupVideo
+            isOpen={isOpenVideo}
+            card={isCard}
+            onCloseVideo={handleCloseVideo} />
+        </Route>
+        <Route path='*'>
+          <Redirect to="/" />
+        </Route>
+      </Routes>
     </div>
   );
 }
