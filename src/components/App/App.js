@@ -9,7 +9,6 @@ import Portfolio from "../Portfolio/Portfolio";
 import Information from "../Information/Information";
 import FormBlock from "../FormBlock/FormBlock";
 import Footer from "../Footer/Footer";
-import Sitemap from "../Sitemap/Sitemap";
 
 function App() {
   const [isOpenPopup, setIsOpenPopup] = React.useState(false);
