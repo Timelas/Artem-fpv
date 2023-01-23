@@ -1,5 +1,5 @@
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
-RewriteRule ^index\.php$ http://название-сайта.ru/ [R=301,L]
+RewriteRule ^index\.php$ http://abaksha.ru/ [R=301,L]
 RewriteCond %{REQUEST_URI} !\?
 RewriteCond %{REQUEST_URI} !\&
 RewriteCond %{REQUEST_URI} !\=
@@ -10,6 +10,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www.домен.ru$ [NC]
 RewriteRule ^(.*)$ http://домен.ru/$1 [R=301,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index.html\ HTTP/
-RewriteRule ^index.html$ http://интернет-страница/ [R=301,L]
-RewriteRule ^index.html/ http://интернет-страница.ru/ [L,R=301]
+RewriteRule ^index.html$ http://abaksha/ [R=301,L]
+RewriteRule ^index.html/ http://abaksha.ru/ [L,R=301]
 ErrorDocument 404 /err404.html
